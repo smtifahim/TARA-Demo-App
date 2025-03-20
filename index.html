@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TARA Acupuncture Research Search</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div align="center">
+            <a href="https://tara-repository.mgb.org/" target="_blank">
+                <img src="tara-logo.png" alt="Click to know more about TARA" width="230">
+            </a>
+            <br>
+            <font face="Arial" color="#285987">Search Acupuncture Research</font>
+        </div>
+        <hr>
+        <table class="input-table">
+            <tr>
+                <td>
+                    Acupoint
+                    <input type="text" id="acupoint" placeholder="Type Acupoint Name"
+                                    oninput="autocomplete(this, 'Acupoint')">
+                </td>
+                <!-- <td>Acupoint<input type="text" id="acupoint_category" placeholder="Type Acupoint"
+                                        oninput="autocomplete(this, 'Acupoint_Category')"></td> -->
+                <td>
+                    Meridian
+                    <input type="text" id="meridian" placeholder="Type Meridian Name"
+                                    oninput="autocomplete(this, 'Meridian')">
+                </td>
+                <!-- <td><input type="text" id="special_point" placeholder="Special Point Category" 
+                                oninput="autocomplete(this, 'Special_Point_Role')"></td> -->
+                <td>
+                    Special Point Role
+                    <input type="text" id="special_point_category" placeholder="Type Special Point Role"
+                                    oninput="autocomplete(this, 'Special_Point_Category')">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                   Surface Region
+                    <input type="text" id="surface_region" placeholder="Type Surface Region"
+                                    oninput="autocomplete(this, 'Surface_Region')">
+                </td>
+                <td>
+                    Related Region
+                    <input type="text" id="related_region" placeholder="Type Related Region"
+                        oninput="autocomplete(this, 'Related_Region')">
+                </td>
+                <td>
+                    Body Region
+                    <input type="text" id="body_region" placeholder="Type Body Region"
+                        oninput="autocomplete(this, 'Body_Region')">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Studied Condition
+                    <input type="text" id="studied_condition" placeholder="Type Studied Condition"
+                        oninput="autocomplete(this, 'Studied_Condition')">
+                </td>
+                <td>
+                    Condition Context
+                    <input type="text" id="condition_context" placeholder="Type Condition Context"
+                        oninput="autocomplete(this, 'Condition_Context')"></td>
+                <td>
+                    Country
+                    <input type="text" id="country" placeholder="Type Country"
+                        oninput="autocomplete(this, 'Country')">
+                </td>
+            </tr>
+        </table>
+        <hr>
+        <div class="buttons">
+            <button onclick="search()">Search</button>
+            <button onclick="resetFields()">Reset</button>
+        </div>
+        <div id="results"></div>
+    </div>
+</body>
+</html>

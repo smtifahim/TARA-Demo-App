@@ -1,0 +1,238 @@
+body
+{
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+.container
+{
+    width: 80%;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2
+{
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.input-table
+{
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+}
+
+.input-table td
+{
+    padding: 6px;
+}
+
+.input-table input
+{
+    width: 95%;
+    padding: 10px;
+    border: 1px solid #33a5d2;
+    border-radius: 6px;
+    font-size: 16px;
+    background: rgb(240, 245, 250);
+}
+
+.buttons
+{
+    text-align: center;
+    margin: 15px 0;
+}
+
+button
+{
+    padding: 10px 20px;
+    margin: 0 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #1c76d5;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover
+{
+    background-color: #30991f;
+}
+
+results
+{
+    margin-top: 25px;
+}
+
+.search-summary
+{
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-left: 4px solid #007bff;
+    font-size: 18px;
+}
+
+.article-group
+{
+    margin-bottom: 30px;
+    border: 1px solid #0b88ef;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.result-table
+{
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 0;
+}
+
+.result-table th, .result-table td
+{
+    border: 1px solid #dddddd;
+    padding: 12px;
+    text-align: left;
+    vertical-align: top;
+}
+
+.result-table th
+{
+    background-color: #227ad2;
+    color: white;
+    font-weight: lighter;
+}
+
+.result-table tr:nth-child(even)
+{
+    background-color: #fafafa;
+}
+
+.result-table tr:hover
+{
+    background-color: #e9f2fb;
+}
+
+.result-table a
+{
+    color: #054789;
+    text-decoration: none;
+}
+
+.result-table a:hover
+{
+    text-decoration: underline;
+}
+
+.acupoint-table
+{
+    margin-top: 0;
+}
+
+td
+{
+    position: relative;
+}
+
+.even-row
+{
+    background-color: #ffffff;
+}
+
+strong
+{
+    font-weight: bold;
+}
+
+.small-space
+{
+    display: block;
+    height: 7px;
+}
+
+/* CSS for autocomplete */
+
+.autocomplete-items
+{
+    position: absolute;
+    border: 1px solid #d4d4d4;
+    border-bottom: none;
+    border-top: none;
+    z-index: 99;
+    top: 100%;
+    left: 0;
+    right: 0;
+    max-height: 350px;
+    overflow-y: auto;
+    background-color: white;
+}
+
+.autocomplete-items div 
+{
+    padding: 10px;
+    cursor: pointer;
+    background-color: #fff;
+    border-bottom: 1px solid #d4d4d4;
+}
+
+.autocomplete-items div:hover
+{
+    background-color:rgb(207, 222, 248);
+}
+
+td 
+{
+    position: relative;
+}
+
+/* .even-row 
+{
+    background-color:rgb(250, 250, 250);
+} */
+
+.search-summary 
+{
+    margin-bottom: 15px;
+    padding: 8px;
+    background-color: #f8f9fa;
+    border-left: 4px solid #007bff;
+}
+
+
+/* Responsive design */
+@media (max-width: 768px)
+{
+    .container
+    {
+        width: 95%;
+        padding: 15px;
+    }
+    
+    .result-table th, .result-table td
+    {
+        padding: 8px;
+        font-size: 14px;
+    }
+}
+
+.autocomplete-active 
+{
+    background-color: #c2daf2 !important; 
+    color: #054789 !important;
+}
+
+/* .autocomplete-active 
+{
+    background-color: #c2daf2 !important; 
+    color: #054789;
+} */
