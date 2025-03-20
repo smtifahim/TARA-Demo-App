@@ -6,7 +6,7 @@ A demo article search app for TARA acupuncture research using html and javascrip
 
 ## JSON Data Loader
 
-After each release of TARA Acupoints ontology, please run rhe python script at `json-data-loader/tara-data-loader.py`. The python script executes a set of SPARQL queries (under `json-data-loader/sparql-queries`) agains the Stardog endpoint and saves the query results as corresponding json files needed for the TARA Article Search application.
+After a new release of TARA Acupoints ontology, please run the python script at `json-data-loader/tara-data-loader.py`. The python script executes a set of SPARQL queries (under `json-data-loader/sparql-queries`) agains the Stardog endpoint and saves the query results as corresponding json files needed for the TARA Article Search application.
 
 ### Sample Execution
 
