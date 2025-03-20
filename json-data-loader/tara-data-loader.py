@@ -15,7 +15,7 @@ conn_details = {
 
 db_name = 'TARA-Acupoints'
 
-# File locations for the queries needed for SCKAN-Explorer
+# File locations for the queries needed for the TARA app
 query_files = [
                 './sparql-queries/article-data.rq',
                 './sparql-queries/acupoints-synonyms.rq',
