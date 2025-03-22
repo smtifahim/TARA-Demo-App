@@ -1,4 +1,4 @@
-# TARA Ariticle Search Demo Application
+# TARA Article Search Demo Application
 
 A demo article search app for TARA acupuncture research, built using HTML and JavaScript. The app is currently deployed on Netlify.
 
