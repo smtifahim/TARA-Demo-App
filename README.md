@@ -1,12 +1,12 @@
-# TARA-Demo-App
+# TARA Ariticle Search Demo Application
 
-A demo article search app for TARA acupuncture research using html and javascript. The app is currently deplyed at netlify.
+A demo article search app for TARA acupuncture research, built using HTML and JavaScript. The app is currently deployed on Netlify.
 
 * Visit the app from [https://tara-demo.netlify.app/](https://tara-demo.netlify.app/)
 
 ## JSON Data Loader
 
-After a new release of TARA Acupoints ontology, please run the python script at `json-data-loader/tara-data-loader.py`. The python script executes a set of SPARQL queries (under `json-data-loader/sparql-queries`) agains the Stardog endpoint and saves the query results as corresponding json files needed for the TARA Article Search application.
+After a new release of the TARA Acupoints ontology, run the Python script at `json-data-loader/tara-data-loader.py`. This script executes a set of SPARQL queries (located in `json-data-loader/sparql-queries`) against the Stardog endpoint and saves the query results as corresponding JSON files required for the TARA Article Search application.  
 
 ### Sample Execution
 
