@@ -86,7 +86,7 @@ WHERE
             FILTER (?Body_Region in (
                                      ## According to the regions of the body from WHO Standard Acupoints Book (page 5)
                                      # Head, Face, Neck, Back 
-                                     'head', 'face', 'neck', 'lower back', 'dorsal thoracic segment of trunk', 'scapular region',
+                                     'head', 'face', 'neck', 'lower back', 'trunk', 'dorsal thoracic segment of trunk', 'scapular region',
                                      # Chest, Abdomen,
                                      'chest', 'process of vertebra', 'abdomen', 'upper abdomen', 'lower abdomen',
                                      # Upper Limb, Lower Limb, Perinial region

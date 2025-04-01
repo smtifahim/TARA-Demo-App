@@ -19,7 +19,7 @@ SELECT DISTINCT
     ?Anatomical_Region_IRI (rdfs:subClassOf* | ilxtr:isPartOf*) ?Body_Region_IRI.
         ?Body_Region_IRI rdfs:label ?Body_Region_Label.
         FILTER (?Body_Region_Label in (
-                    'head', 'face', 'neck', 'lower back', 'dorsal thoracic segment of trunk', 'scapular region',
+                    'head', 'face', 'neck', 'trunk', 'lower back', 'dorsal thoracic segment of trunk', 'scapular region',
                     'chest', 'process of vertebra', 'abdomen', 'upper abdomen', 'lower abdomen',
                     'perineum', 'limb', 'lower limb segment', 'upper limb segment', 
                     'arm', 'elbow', 'forearm', 'hand', 'shoulder', 'knee',
