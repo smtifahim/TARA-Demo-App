@@ -1,6 +1,6 @@
 # TARA Article Search Demo Application
 
-A web-based search application for TARA acupuncture research literature. This demo app enables researchers, practitioners, and students to search and discover acupuncture research articles using standardized terminology from the TARA Acupoints ontology. It was developed to demonstrate how queries from TARA Acupoints Ontology can enable intelliogent search functionalities.
+A web-based search application for TARA acupuncture research literature. This demo app enables researchers, practitioners, and students to search and discover acupuncture research articles using standardized terminology from the TARA Acupoints ontology. It was developed to demonstrate how queries from TARA Acupoints Ontology can enable intelligent semantic search functionalities.
 
 * [About TARA Acupoints Ontology](https://github.com/smtifahim/TARA-Ontology-Repository/tree/master/ontology-files/generated)
 * [TARA Acupoints Ontology Repository](https://github.com/smtifahim/TARA-Ontology-Repository/tree/master)
