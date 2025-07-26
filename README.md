@@ -32,10 +32,10 @@ TARA-Demo-App/
 ├── json/                   # Data files for the application
 │   ├── article-data.json           # Main research article metadata
 │   ├── acupoints-synonyms.json     # Acupoint names and synonyms
-│   ├── meridians-synonyms.json     # Meridian system terminology
-│   ├── anatomical-synonyms.json    # Anatomical location terms
-│   ├── body-regions-synonyms.json  # Body region classifications
-│   └── conditions-synonyms.json    # Health condition terminology
+│   ├── meridians-synonyms.json     # Meridian names and synonyms
+│   ├── anatomical-synonyms.json    # Anatomical location synonyms
+│   ├── body-regions-synonyms.json  # Body region synonyms
+│   └── conditions-synonyms.json    # Health condition synonyms
 └── json-data-loader/       # Data management tools
     ├── tara-data-loader.py         # Python script for data updates
     └── sparql-queries/             # SPARQL query files
