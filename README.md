@@ -12,10 +12,9 @@ A web-based search application for TARA acupuncture research literature. This de
 ## Features
 
 - **Multi-field Search**: Search articles by acupoints, meridians, anatomical locations, health conditions, and more
-- **Intelligent Autocomplete**: Smart suggestions with synonym support for Chinese and English terminology
+- **Intelligent Autocomplete**: Smart suggestions with synonym support for Chinese and English terminology for acupoints and syonymous search for other filters.
 - **Ontology-based**: Leverages the TARA Acupoints ontology for standardized terminology
 - **Responsive Design**: Works seamlessly across desktop and mobile devices
-- **Real-time Results**: Instant search results as you type
 
 The application allows searching across multiple dimensions including acupoints (English and Chinese names), meridians, special point roles, anatomical regions, health conditions, and clinical studies.
 
