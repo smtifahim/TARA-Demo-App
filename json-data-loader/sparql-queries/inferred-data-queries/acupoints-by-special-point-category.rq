@@ -1,0 +1,45 @@
+# List all the acupoints along with their and special point categories
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX ilxtr: <http://uri.interlex.org/tgbugs/uris/readable/>
+PREFIX TARA: <http://www.acupunctureresearch.org/tara/ontology/>
+
+SELECT DISTINCT
+?acupoint_iri ?acupoint_label 
+# ?meridian
+?special_point_iri ?special_point
+?special_point_category_iri ?special_point_category
+
+WHERE 
+{
+    # FILTER (?acupoint = 'LU 9').
+    # FILTER (?meridian = 'Lung Meridian').
+    # FILTER (?special_point_category = 'Front-Mu Point').
+    # FILTER (?special_point_category = 'Xi-Cleft Point').
+
+    OPTIONAL {?acupoint_iri TARA:hasMeridian/rdfs:label ?meridian.}
+    ?acupoint_iri rdfs:subClassOf*/rdfs:label "Meridian Acupoint".
+    ?acupoint_iri rdfs:label ?acupoint_label.
+
+    OPTIONAL
+    {
+        ?acupoint_iri rdfs:subClassOf+ ?special_point_iri.        
+        ?special_point_iri rdfs:subClassOf+ ?special_point_category_iri.
+        ?special_point_category_iri rdfs:subClassOf+/rdfs:label 'Special Point'.
+         
+        ?special_point_iri rdfs:label ?special_point. 
+        ?special_point_category_iri rdfs:label ?special_point_category.
+    }
+
+   # Exclude generic categorization classes like 'Acupoint of the X Meridian'. Meridian Acupoint, 'Special Points', etc.
+    FILTER (!regex(str(?acupoint_label), 'Acupoint of|Meridian Acupoint|Point of|Point|Extra Acupoint'))
+    FILTER (!regex(str(?acupoint_label), 'Male|Female'))
+    FILTER (?special_point != '')
+
+
+}
+ORDER BY ?meridian ?acupoint
+limit 999

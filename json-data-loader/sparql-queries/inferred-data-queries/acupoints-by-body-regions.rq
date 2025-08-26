@@ -1,0 +1,51 @@
+# Acopoints by body regions.
+# What body regions are associated with a particular acupoint (e.g., LU 9)?
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX TARA: <http://www.acupunctureresearch.org/tara/ontology/>
+PREFIX ilxtr: <http://uri.interlex.org/tgbugs/uris/readable/>
+
+
+SELECT DISTINCT
+?acupoint_iri ?acupoint 
+?surface_region_iri  ?surface_region 
+?related_region_iri  ?related_region 
+?body_region_iri ?body_region
+
+WHERE 
+{
+    # FILTER (?acupoint = 'LU 9').
+    # FILTER (?surface_region = 'anterior chest'). 
+    # FILTER (?body_region = 'chest').
+
+    ?acupoint_iri rdfs:label ?acupoint.
+    ?acupoint_iri TARA:hasRelatedLocation ?related_region_iri.
+    ?acupoint_iri TARA:hasSurfaceLocation ?surface_region_iri.
+    ?surface_region_iri rdfs:label ?surface_region.
+    ?related_region_iri rdfs:label ?related_region.
+    
+    OPTIONAL
+    {
+    ?surface_region_iri ilxtr:isPartOf* ?body_region_iri.
+    ?body_region_iri rdfs:label ?body_region
+    FILTER (?body_region in (## According to the regions of the body from WHO Standard Acupoints Book (page 5)
+                              # Head, Face, Neck, Back 
+                                'head', 'face', 'neck', 'lower back', 'dorsal thoracic segment of trunk', 'scapular region',
+                                # Chest, Abdomen,
+                                'chest', 'process of vertebra', 'abdomen', 'upper abdomen', 'lower abdomen',
+                                # Upper Limb, Lower Limb, Perinial region
+                                'perineum', 'limb', 'lower limb segment', 'upper limb segment', 
+                                'arm', 'elbow', 'forearm', 'hand', 'shoulder', 'knee',
+                                'leg', 'foot', 'tarsal region', 'buttock', 'hindlimb stylopod' # thigh
+                                )).
+                             
+    }
+
+    FILTER (?surface_region != ?related_region)
+
+}
+ORDER BY ?acupoint ?body_region ?surface_region ?related_region
+limit 9999
