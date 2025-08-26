@@ -12,14 +12,14 @@ PREFIX ilxtr: <http://uri.interlex.org/tgbugs/uris/readable/>
 SELECT DISTINCT
 ?acupoint_iri ?acupoint 
 ?surface_region_iri  ?surface_region 
-?related_region_iri  ?related_region 
+# ?related_region_iri  ?related_region 
 ?body_region_iri ?body_region
 
 WHERE 
 {
     # FILTER (?acupoint = 'LU 9').
     # FILTER (?surface_region = 'anterior chest'). 
-    # FILTER (?body_region = 'chest').
+    # FILTER (?body_region = 'dorsal thoracic segment of trunk').
 
     ?acupoint_iri rdfs:label ?acupoint.
     ?acupoint_iri TARA:hasRelatedLocation ?related_region_iri.
@@ -29,11 +29,12 @@ WHERE
     
     OPTIONAL
     {
-    ?surface_region_iri ilxtr:isPartOf* ?body_region_iri.
+    ?surface_region_iri rdfs:subClassOf*/ilxtr:isPartOf* ?body_region_iri.
     ?body_region_iri rdfs:label ?body_region
     FILTER (?body_region in (## According to the regions of the body from WHO Standard Acupoints Book (page 5)
                               # Head, Face, Neck, Back 
-                                'head', 'face', 'neck', 'lower back', 'dorsal thoracic segment of trunk', 'scapular region',
+                                'head', 'face', 'neck', 'lower back', 'dorsum', 'sacral region', # dorsum = back 
+                                'dorsal thoracic segment of trunk', 'scapula',  # dorsal thoracic segment of trunk = upper back
                                 # Chest, Abdomen,
                                 'chest', 'process of vertebra', 'abdomen', 'upper abdomen', 'lower abdomen',
                                 # Upper Limb, Lower Limb, Perinial region
